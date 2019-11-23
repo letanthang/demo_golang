@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/letanthang/demo_golang/type_system/student"
 	"strconv"
 )
 
@@ -44,14 +45,14 @@ func main() {
 
 	// Struct
 
-	// vic := Student{
+	// vic := model.Student{
 	// 	FirstName: "Victor",
 	// 	LastName:  "Nguyen",
 	// 	Age:       100,
 	// 	Email:     "victornguyen@gmail.com",
 	// }
 
-	vic := Student{"Victor", "Nguyen", 100, "hihihi"}
+	vic := student.Student{"Victor", "Nguyen", 100, "hihihi"}
 
 	fmt.Println(vic)
 	fmt.Printf("%+v", vic)
@@ -101,6 +102,6 @@ func main() {
 	// fmt.Println(inputJson)
 }
 
-func SetEmail(s *Student, email string) {
+func SetEmail(s *student.Student, email string) {
 	s.Email = email
 }

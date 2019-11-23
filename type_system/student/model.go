@@ -1,4 +1,4 @@
-package main
+package student
 
 type Student struct {
 	FirstName string `json:"first_name" bson:"full_name" validate:"required"`
