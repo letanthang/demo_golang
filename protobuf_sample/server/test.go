@@ -8,7 +8,7 @@ import (
 	"github.com/letanthang/demo_golang/protobuf_sample/proto/echo"
 )
 
-func main() {
+func test() {
 	req := &echo.EchoRequest{Name: "Hello"}
 	data, err := proto.Marshal(req)
 
