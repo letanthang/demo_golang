@@ -7,6 +7,7 @@ import (
 
 	pb "github.com/letanthang/demo_golang/hello_grpc/hellogrpc"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 const (
@@ -27,6 +28,8 @@ func main() {
 	}
 	s := grpc.NewServer()
 	pb.RegisterGreeterServer(s, &server{})
+	//support reflection for grpcurl
+	reflection.Register(s)
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to served: %v", err)
 	}
