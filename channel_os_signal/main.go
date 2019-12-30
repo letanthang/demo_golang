@@ -20,6 +20,7 @@ func main() {
 			time.Sleep(time.Millisecond * 800)
 		}
 	}()
-	<-forever
+	<-forever // routine -> sleep/pending
+	// notify : receive from channel -> routine active
 	fmt.Println("Program end: Thanks for using golang!")
 }
