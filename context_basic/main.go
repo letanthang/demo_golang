@@ -8,9 +8,9 @@ import (
 
 func main() {
 	ctx := context.Background()
-	// timeout after 2s
+	// // timeout after 2s
 	// ctx, cancel := context.WithTimeout(ctx, time.Second*2)
-	// cancel after 1s
+	// // cancel after 1s
 	// time.AfterFunc(time.Second*1, func() {
 	// 	cancel()
 	// })
