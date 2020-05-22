@@ -43,7 +43,7 @@ func main() {
 
 	bs, err := json.Marshal(student)
 	if err != nil {
-		fmt.Println(bs)
+		fmt.Println(err)
 		return
 	}
 
