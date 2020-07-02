@@ -4,6 +4,9 @@ go 1.13
 
 require (
 	github.com/DataDog/zstd v1.4.4 // indirect
+	github.com/cenkalti/backoff/v4 v4.0.2 // indirect
+	github.com/dustin/go-humanize v1.0.0 // indirect
+	github.com/elastic/go-elasticsearch/v8 v8.0.0-20200630125629-8413c97f3011 // indirect
 	github.com/golang/protobuf v1.3.2
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/gorilla/mux v1.7.3
