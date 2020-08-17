@@ -1,0 +1,23 @@
+go_postgres_database:
+  host: 35.197.146.208
+  user: postgres
+  password: "@bcd1@34"
+  name: phoenix
+  debug: true
+
+mongo:
+  uri:
+  host: localhost
+  user: mongoadmin
+  password: secret
+
+paging:
+  limit: 100
+
+encryption:
+  jwt_secret: secret
+
+profiler:
+  prometheus: false
+  statsd_address: 127.0.0.1:8125
+  service: "go-upload"

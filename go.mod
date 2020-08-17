@@ -8,9 +8,9 @@ require (
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/elastic/go-elasticsearch/v8 v8.0.0-20200630125629-8413c97f3011 // indirect
 	github.com/golang/protobuf v1.3.2
-	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/wire v0.4.0
 	github.com/gorilla/mux v1.7.3
+	github.com/letanthang/my_framework v0.0.0-20190924042124-173cb7750f57
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/panjf2000/ants/v2 v2.4.1
 	github.com/pelletier/go-toml v1.6.0 // indirect
@@ -23,12 +23,9 @@ require (
 	github.com/stretchr/testify v1.4.0
 	github.com/tidwall/pretty v1.0.1 // indirect
 	github.com/urfave/cli/v2 v2.0.0
-	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
-	github.com/xdg/stringprep v1.0.0 // indirect
 	github.com/yanzay/log v0.0.0-20160419144809-87352bb23506
 	go.mongodb.org/mongo-driver v1.2.0
 	golang.org/x/sync v0.0.0-20190423024810-112230192c58
 	golang.org/x/sys v0.0.0-20191210023423-ac6580df4449 // indirect
-	golang.org/x/text v0.3.2 // indirect
 	google.golang.org/grpc v1.25.1
 )
