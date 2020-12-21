@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/DataDog/zstd v1.4.4 // indirect
 	github.com/cenkalti/backoff/v4 v4.0.2 // indirect
+	github.com/confluentinc/confluent-kafka-go v1.5.2 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/elastic/go-elasticsearch/v8 v8.0.0-20200630125629-8413c97f3011 // indirect
 	github.com/golang/protobuf v1.3.2
@@ -28,4 +29,5 @@ require (
 	golang.org/x/sync v0.0.0-20190423024810-112230192c58
 	golang.org/x/sys v0.0.0-20191210023423-ac6580df4449 // indirect
 	google.golang.org/grpc v1.25.1
+	gopkg.in/confluentinc/confluent-kafka-go.v1 v1.5.2 // indirect
 )
