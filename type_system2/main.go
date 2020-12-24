@@ -3,9 +3,15 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/letanthang/demo_golang/type_system/student"
 	"reflect"
 	"strconv"
+
+	"github.com/letanthang/demo_golang/type_system/student"
+)
+
+var (
+	maxInt64 uint64 = 1<<64 - 1
+	aInteger int    = 4000
 )
 
 func main() {
@@ -89,6 +95,9 @@ func main() {
 	type1 = reflect.TypeOf(cInt)
 	fmt.Println(cInt, "type =", type1.Name(), "kind=", type1.Kind())
 
+	fmt.Printf("value = %v type=%T\n", aInt, aInt)
+	fmt.Printf("value = %v type=%T\n", aInteger, aInteger)
+	fmt.Printf("value = %v type=%T\n", maxInt64, maxInt64)
 	// struct <-> struct
 
 	type Boy struct {
