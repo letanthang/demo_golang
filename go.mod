@@ -28,6 +28,7 @@ require (
 	go.mongodb.org/mongo-driver v1.2.0
 	golang.org/x/sync v0.0.0-20190423024810-112230192c58
 	golang.org/x/sys v0.0.0-20191210023423-ac6580df4449 // indirect
+	golang.org/x/tour v0.0.0-20201207214521-004403599411 // indirect
 	google.golang.org/grpc v1.25.1
 	gopkg.in/confluentinc/confluent-kafka-go.v1 v1.5.2 // indirect
 )
