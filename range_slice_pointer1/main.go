@@ -13,6 +13,7 @@ func main() {
 	slice := []Student{{"Thang", 36, "2H"}, {"Tram", 29, "2A"}}
 	pointerSlice := make([]*Student, 2)
 	pointerSlice1 := make([]*Student, 2)
+	// v is just a copy!!!
 	for i, v := range slice {
 		// &v do not work
 		pointerSlice[i] = &v

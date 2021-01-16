@@ -18,6 +18,7 @@ type Class struct {
 func main() {
 	slice := []Student{{"Thang", 36, Class{1, "2A"}}, {"Tram", 29, Class{1, "2B"}}}
 
+	// v is just a copy!!!
 	for i, v := range slice {
 		// v.Name or v.Class.Name do not work
 		v.Name = "haha"
