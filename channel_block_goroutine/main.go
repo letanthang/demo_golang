@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	c := make(chan string)
 
-	go greet(c) // without this, main goroutine block forever <=> deadlock
+	go greet(c) // without this (sub goroutine), main goroutine block forever <=> deadlock
 	c <- "World"
 
 	fmt.Println("program end")
