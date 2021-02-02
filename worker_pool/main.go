@@ -1,8 +1,10 @@
 // start worker pool of 3 member
 // read jobs from the same channel int
 // return result channel of int * 2
-// text output : worker id started job ; worker id finished job ;
 
+// text output : worker id started job ; worker id finished job ;
+// problem 1 of this method is using a large channel of jobs with consume high ram
+// problem 2 feeding channel all the value before process it
 package main
 
 import (
