@@ -1,4 +1,4 @@
-module github.com/letanthang/demo_golang
+module app
 
 go 1.13
 
@@ -13,8 +13,10 @@ require (
 	github.com/gorilla/mux v1.7.3
 	github.com/letanthang/my_framework v0.0.0-20190924042124-173cb7750f57
 	github.com/mitchellh/go-homedir v1.1.0
+	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/panjf2000/ants/v2 v2.4.1
 	github.com/pelletier/go-toml v1.6.0 // indirect
+	github.com/sirupsen/logrus v1.2.0
 	github.com/spf13/afero v1.2.2 // indirect
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
