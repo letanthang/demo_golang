@@ -3,6 +3,7 @@ module app
 go 1.13
 
 require (
+	emperror.dev/errors v0.8.0 // indirect
 	github.com/DataDog/zstd v1.4.4 // indirect
 	github.com/cenkalti/backoff/v4 v4.0.2 // indirect
 	github.com/confluentinc/confluent-kafka-go v1.5.2 // indirect
