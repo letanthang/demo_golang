@@ -1,3 +1,6 @@
+// underline slice is a struct contain a pointer reference to memory address
+// copy array means copy pointer point to the same memory address
+// so change slice - the copied slice change too
 package main
 
 import "fmt"
@@ -11,7 +14,6 @@ func main() {
 }
 
 func change(slice []int) {
-	slice = append(slice, 6)
-	slice[0] = 10
+	slice[0] = 1000
 	fmt.Printf("%+v", slice)
 }
