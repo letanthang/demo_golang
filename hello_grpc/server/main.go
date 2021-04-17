@@ -5,7 +5,8 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/letanthang/demo_golang/hello_grpc/hellogrpc"
+	pb "app/hello_grpc/hellogrpc"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -14,11 +15,18 @@ const (
 	port = ":50051"
 )
 
-type server struct{}
+type server struct {
+	pb.UnimplementedGreeterServer
+}
 
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.Name)
 	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
+}
+
+func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
+	log.Printf("Received: %v", in.Name)
+	return &pb.HelloReply{Message: "Hello " + in.Name + " Again!"}, nil
 }
 
 func main() {
