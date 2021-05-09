@@ -7,9 +7,10 @@ import (
 	"net/http"
 	"time"
 
+	"app/protobuf_sample/proto/echo"
+
 	"github.com/golang/protobuf/proto"
 	"github.com/gorilla/mux"
-	"github.com/letanthang/demo_golang/protobuf_sample/proto/echo"
 )
 
 func Echo(resp http.ResponseWriter, req *http.Request) {

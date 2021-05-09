@@ -7,8 +7,9 @@ import (
 	"log"
 	"net/http"
 
+	"app/protobuf_sample/proto/echo"
+
 	"github.com/golang/protobuf/proto"
-	"github.com/letanthang/demo_golang/protobuf_sample/proto/echo"
 )
 
 func makeRequest(request *echo.EchoRequest) *echo.EchoResponse {
