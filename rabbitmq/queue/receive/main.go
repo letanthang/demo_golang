@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/spf13/viper"
 	"github.com/streadway/amqp"
 )
 
@@ -14,7 +15,13 @@ func failOnError(err error, msg string) {
 }
 
 func main() {
-	conn, err := amqp.Dial("amqp://rdmdselh:coXx6LiSCvlm5noiccWyImGk0EPlre_C@mustang.rmq.cloudamqp.com/rdmdselh")
+	viper.SetConfigType("env")
+	viper.AutomaticEnv()
+	viper.SetDefault("RABBIT_HOST", "amqp://guest:guest@localhost:5672")
+	host := viper.GetString("RABBIT_HOST")
+	fmt.Println("RABBIT_HOST", host)
+	//"amqp://rdmdselh:coXx6LiSCvlm5noiccWyImGk0EPlre_C@mustang.rmq.cloudamqp.com/rdmdselh"
+	conn, err := amqp.Dial(host)
 	failOnError(err, "Failed to connect RabbitMQ")
 
 	ch, err := conn.Channel()
