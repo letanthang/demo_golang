@@ -3,7 +3,8 @@ package db
 import (
 	"context"
 
-	"github.com/letanthang/demo_golang/mongo_search/types"
+	"app/mongo_search/types"
+
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"

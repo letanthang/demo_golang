@@ -1,8 +1,8 @@
 package main
 
 import (
+	"app/type_system/student"
 	"fmt"
-	"github.com/letanthang/demo_golang/type_system/student"
 	"reflect"
 )
 

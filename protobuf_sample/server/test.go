@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 
+	"app/protobuf_sample/proto/echo"
+
 	"github.com/golang/protobuf/proto"
-	"github.com/letanthang/demo_golang/protobuf_sample/proto/echo"
 )
 
 func test() {

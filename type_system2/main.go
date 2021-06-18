@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/letanthang/demo_golang/type_system/student"
+	"app/type_system/student"
 )
 
 var (

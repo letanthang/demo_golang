@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/letanthang/demo_golang/mongo_search/config"
+	"app/mongo_search/config"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"

@@ -18,7 +18,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/letanthang/demo_golang/cli_app/mycalc/cmd"
+	"app/cli_app/mycalc/cmd"
 )
 
 func main() {

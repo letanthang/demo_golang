@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/letanthang/demo_golang/mongo_search/db"
-	"github.com/letanthang/demo_golang/mongo_search/types"
+	"app/mongo_search/db"
+	"app/mongo_search/types"
 )
 
 func main() {
