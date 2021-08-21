@@ -1,21 +1,21 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: test-redis
+  name: test-mongo
   namespace: develop
   labels:
-    app: test-redis
+    app: test-mongo
 spec:
   containers:
-    - name: test-redis
-      image: 'letanthang/testredis'
+    - name: test-mongo
+      image: 'letanthang/testmongo'
       ports:
         - name: http
           containerPort: 8080
           protocol: TCP
       env:
-        - name: REDIS_HOST
-          value: '10.46.47.43:6379'
+        - name: MONGO_URI
+          value: 'mongodb+srv://mongoadmin:abcd1234@cluster0.cczrl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
           # value: '10.138.0.56:6379'
           # value: '10.194.110.227:6379'
       resources:

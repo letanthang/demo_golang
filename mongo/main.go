@@ -1,7 +1,7 @@
 package main
 
 import (
-	"app/mongo/models"
+	"app/models"
 	"context"
 	"fmt"
 	"time"
@@ -45,7 +45,7 @@ func Connect() {
 	viper.AutomaticEnv()
 	viper.SetDefault("MONGO_URI", "mongodb://mongo:mongo@localhost:27017")
 	uri := viper.GetString("MONGO_URI")
-
+	// uri = "mongodb+srv://mongoadmin:abcd1234@cluster0.cczrl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 	client, err := mongo.NewClient(options.Client().ApplyURI(uri))
 	if err != nil {
 		panic(err)
@@ -63,6 +63,7 @@ func Connect() {
 }
 
 func AddStudent(student *models.Student) error {
+	start := time.Now()
 	ctx := context.Background()
 	ctx, cancel := context.WithTimeout(ctx, time.Second*10)
 	defer cancel()
@@ -74,10 +75,12 @@ func AddStudent(student *models.Student) error {
 	if err != nil {
 		return errors.WithMessage(err, "AddStudent error")
 	}
+	fmt.Println(time.Since(start))
 	return nil
 }
 
 func SearchStudent(req models.StudentSearchReq) (*[]models.Student, error) {
+	start := time.Now()
 	var students []models.Student
 	findOptions := options.Find()
 	findOptions.SetLimit(30)
@@ -114,5 +117,6 @@ func SearchStudent(req models.StudentSearchReq) (*[]models.Student, error) {
 		return nil, err
 	}
 
+	fmt.Println(time.Since(start))
 	return &students, nil
 }
