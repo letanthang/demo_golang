@@ -15,7 +15,8 @@ spec:
           protocol: TCP
       env:
         - name: MONGO_URI
-          value: 'mongodb+srv://mongoadmin:abcd1234@cluster0.cczrl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+          # value: 'mongodb+srv://mongoadmin:abcd1234@cluster0.cczrl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+          value: 'mongodb+srv://mongoadmin:jackkicm@developecm.ij38x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
           # value: '10.138.0.56:6379'
           # value: '10.194.110.227:6379'
       resources:

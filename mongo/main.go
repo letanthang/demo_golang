@@ -46,6 +46,7 @@ func Connect() {
 	viper.SetDefault("MONGO_URI", "mongodb://mongo:mongo@localhost:27017")
 	uri := viper.GetString("MONGO_URI")
 	// uri = "mongodb+srv://mongoadmin:abcd1234@cluster0.cczrl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+	// uri = "mongodb+srv://mongoadmin:jackkicm@developecm.ij38x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 	fmt.Println("MONGO_URI", uri)
 	client, err := mongo.NewClient(options.Client().ApplyURI(uri))
 	if err != nil {
