@@ -10,23 +10,39 @@ import (
 )
 
 var ctx = context.Background()
+var rdb *redis.Client
 
 func main() {
 	fmt.Println("test redis begin:")
-	ExampleClient()
+	Connect()
+
+	viper.SetDefault("REDIS_REQUEST_NUM", 1)
+	req_num := viper.GetInt("REDIS_REQUEST_NUM")
+
+	for i := 0; i < req_num; i++ {
+		ExampleClient(i)
+		go ExampleClient(i)
+		go ExampleClient(i)
+		go ExampleClient(i)
+		go ExampleClient(i)
+	}
+
 }
 
-func ExampleClient() {
+func Connect() {
 	viper.SetConfigType("env")
 	viper.AutomaticEnv()
 	viper.SetDefault("REDIS_HOST", "localhost:6379")
 	host := viper.GetString("REDIS_HOST")
 	fmt.Println("host", host)
-	rdb := redis.NewClient(&redis.Options{
+	rdb = redis.NewClient(&redis.Options{
 		Addr:     host,
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
+}
+
+func ExampleClient(id int) {
 
 	err := rdb.Set(ctx, "key", "value", 0).Err()
 	if err != nil {
@@ -39,16 +55,16 @@ func ExampleClient() {
 		panic(err)
 	}
 
-	fmt.Println("key", val, time.Since(start))
+	fmt.Println(id, "key", val, time.Since(start))
 
 	start = time.Now()
 	val2, err := rdb.Get(ctx, "key2").Result()
 	if err == redis.Nil {
-		fmt.Println("key2 does not exist", time.Since(start))
+		fmt.Println(id, "key2 does not exist", time.Since(start))
 	} else if err != nil {
 		panic(err)
 	} else {
-		fmt.Println("key2", val2, time.Since(start))
+		fmt.Println(id, "key2", val2, time.Since(start))
 	}
 
 }

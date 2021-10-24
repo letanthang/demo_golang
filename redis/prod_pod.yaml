@@ -18,6 +18,8 @@ spec:
           # value: 'my-redis-master.redis:6379'
           value: '10.46.47.43:6379'
           # value: '10.194.110.227:6379'
+        - name: REDIS_REQUEST_NUM
+          value: '3000'
       resources:
         limits:
           cpu: 320m
