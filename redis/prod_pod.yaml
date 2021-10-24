@@ -15,8 +15,8 @@ spec:
           protocol: TCP
       env:
         - name: REDIS_HOST
+          # value: 'my-redis-master.redis:6379'
           value: '10.46.47.43:6379'
-          # value: '10.138.0.56:6379'
           # value: '10.194.110.227:6379'
       resources:
         limits:

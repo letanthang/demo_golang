@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"time"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/spf13/viper"
@@ -32,19 +33,22 @@ func ExampleClient() {
 		panic(err)
 	}
 
+	start := time.Now()
 	val, err := rdb.Get(ctx, "key").Result()
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("key", val)
 
+	fmt.Println("key", val, time.Since(start))
+
+	start = time.Now()
 	val2, err := rdb.Get(ctx, "key2").Result()
 	if err == redis.Nil {
-		fmt.Println("key2 does not exist")
+		fmt.Println("key2 does not exist", time.Since(start))
 	} else if err != nil {
 		panic(err)
 	} else {
-		fmt.Println("key2", val2)
+		fmt.Println("key2", val2, time.Since(start))
 	}
 
 }
