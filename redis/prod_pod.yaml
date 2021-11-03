@@ -15,11 +15,12 @@ spec:
           protocol: TCP
       env:
         - name: REDIS_HOST
+          value: '10.14.58.251:6379'
+          # value: '10.46.47.43:6379'
           # value: 'my-redis-master.redis:6379'
-          value: '10.46.47.43:6379'
           # value: '10.194.110.227:6379'
         - name: REDIS_REQUEST_NUM
-          value: '3000'
+          value: '3'
       resources:
         limits:
           cpu: 320m
