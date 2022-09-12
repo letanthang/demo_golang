@@ -15,6 +15,7 @@ require (
 	github.com/spf13/viper v1.6.1
 	github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271
 	github.com/stretchr/testify v1.7.0
+	github.com/timtadh/data-structures v0.6.2
 	github.com/urfave/cli/v2 v2.0.0
 	github.com/yanzay/log v0.0.0-20160419144809-87352bb23506
 	go.mongodb.org/mongo-driver v1.2.0
