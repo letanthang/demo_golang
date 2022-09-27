@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 )
@@ -27,7 +27,7 @@ func callAPI1() {
 	}
 	defer res.Body.Close()
 
-	bs, err := ioutil.ReadAll(res.Body)
+	bs, err := io.ReadAll(res.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -41,7 +41,7 @@ func callAPI2() {
 	}
 	defer res.Body.Close()
 
-	bs, err := ioutil.ReadAll(res.Body)
+	bs, err := io.ReadAll(res.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
