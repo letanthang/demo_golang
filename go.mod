@@ -18,6 +18,7 @@ require (
 	github.com/urfave/cli/v2 v2.0.0
 	github.com/yanzay/log v0.0.0-20160419144809-87352bb23506
 	go.mongodb.org/mongo-driver v1.10.2
+	golang.org/x/exp v0.0.0-20220921164117-439092de6870
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/tour v0.0.0-20201207214521-004403599411
 	google.golang.org/grpc v1.37.0
@@ -56,7 +57,7 @@ require (
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d // indirect
 	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
-	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
+	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f // indirect
 	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20210416161957-9910b6c460de // indirect
