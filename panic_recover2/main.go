@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func recoveryFunction() {
-	// if recoveryMessage := recover(); recoveryMessage != nil {
-	// 	fmt.Println(recoveryMessage)
+	// if err := recover(); err != nil {
+	// 	fmt.Println(err)
 	// }
 	fmt.Println("This is recovery function...")
 }

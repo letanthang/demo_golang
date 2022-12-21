@@ -26,6 +26,10 @@ func main() {
 	sort.Sort(i)
 	fmt.Println(is1, is2)
 
+	ss := []string{"Melon", "Apple", "Pinapple", "Durion"}
+
+	sort.Sort(sort.StringSlice(ss))
+	fmt.Println(ss)
 }
 
 func testArr() []int {

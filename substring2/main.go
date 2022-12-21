@@ -13,4 +13,6 @@ func main() {
 
 	//print value without ";"
 	fmt.Println(value[:3] + value[4:])
+	fmt.Println(value[1:2],value[3:4])
+	fmt.Println(value[0], value[0:1])
 }

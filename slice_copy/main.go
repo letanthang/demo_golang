@@ -10,10 +10,16 @@ func main() {
 	aSlice := []int{5, 9, 3}
 
 	change(aSlice)
-	fmt.Printf("%+v", aSlice)
+	fmt.Printf("%+v\n", aSlice)
+	appendSlice(aSlice)
+	fmt.Printf("%+v\n", aSlice)
 }
 
 func change(slice []int) {
 	slice[0] = 1000
-	fmt.Printf("%+v", slice)
+	fmt.Printf("%+v\n", slice)
+}
+func appendSlice(slice []int) {
+	slice = append(slice, 100)
+	fmt.Printf("%+v\n", slice)
 }
