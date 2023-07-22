@@ -5,7 +5,10 @@ import "fmt"
 func main() {
 	c := make(chan string)
 
-	go greet(c) // without this (sub goroutine), main goroutine block forever <=> deadlock
+	// without this sub goroutine, main goroutine block forever
+	// because the size exceed capacity will put go routine to sleep
+
+	go greet(c) 
 	c <- "World"
 
 	fmt.Println("program end")
