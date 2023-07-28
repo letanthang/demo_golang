@@ -12,6 +12,9 @@ func main() {
 	//**remember keep main routine alive (active/sleep -> not finished)
 	forever := make(chan os.Signal)
 	signal.Notify(forever, os.Interrupt)
+
+	// we really don't need this to keep the program alive
+	// just use it for printing text
 	go func() {
 		i := 0
 		for true {
