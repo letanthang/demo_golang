@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 type Student struct {
@@ -13,26 +15,10 @@ type Student struct {
 }
 
 func main() {
+	slice := []int{0,1,2}
 
-	ten := "Sang"
-	ho := "Nguyen"
-	msg := getfullname(ten, ho)
-	fmt.Println(msg)
-	msg1 := getfullname2(ten, ho)
-	fmt.Println(msg1)
+	pas 
 
-	//khai báo slice
-	days := []string{"Monday", "Tuesday", "Wednesday"}
-	msg2 := getDays(days)
-	fmt.Println(msg2)
-	manh := Student{
-		FirstName: "Manh",
-		LastName:  "Nguyen",
-		Age:       26,
-		Grade:     9,
-		ClassName: "HHM",
-	}
-	fmt.Println(manh)
 }
 
 func getfullname(firstname, lastname string) string {
@@ -47,4 +33,8 @@ func getfullname2(firstname, lastname string) string {
 }
 func getDays(day []string) string {
 	return day[0] + "," + day[1] + "," + day[2]
+}
+
+func passByValue2(a *[]int) {
+	*a = append(*a, 100)
 }
