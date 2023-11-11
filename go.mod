@@ -15,11 +15,13 @@ require (
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/viper v1.6.1
 	github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.0
 	github.com/urfave/cli/v2 v2.0.0
 	github.com/yanzay/log v0.0.0-20160419144809-87352bb23506
 	go.mongodb.org/mongo-driver v1.10.2
+	go.uber.org/goleak v1.3.0
 	golang.org/x/exp v0.0.0-20220921164117-439092de6870
+	golang.org/x/net v0.7.0
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
 	golang.org/x/tour v0.0.0-20201207214521-004403599411
 	google.golang.org/grpc v1.37.0
@@ -72,7 +74,6 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d // indirect
-	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/term v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
