@@ -5,14 +5,13 @@ import "fmt"
 func main() {
 	value := "cat;dog"
 
-	s1 := value[:3]
-	fmt.Println(s1)
+	fmt.Println(len(value))
+	fmt.Println(value[:3])
 	// Take substring from index 4 to length of string.
-	substring := value[4:len(value)]
-	fmt.Println(substring)
+	fmt.Println(value[4:])
 
 	//print value without ";"
 	fmt.Println(value[:3] + value[4:])
-	fmt.Println(value[1:2],value[3:4])
+	fmt.Println(value[1:2], value[3:4])
 	fmt.Println(value[0], value[0:1])
 }
