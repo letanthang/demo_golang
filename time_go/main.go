@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-const timeLayout = "20060102T15:04:05MST"
+const timeLayout = "20060102T15:04:05JST"
 
 var (
 	VST = time.FixedZone("Asia/Ho_Chi_Minh", 7*60*60)
@@ -43,19 +43,19 @@ func createTime() {
 }
 
 func parseTimeWithTimezone() {
-	stringTime := "20240801T12:20:05JST"
+	stringTime := "20240801T12:35:05JST"
 	t, err := time.ParseInLocation(timeLayout, stringTime, JST)
 	if err != nil {
 		fmt.Println(err)
-		return
+		// return
 	}
 
-	// utc:= t.UTC()
-	// loc, err := time.LoadLocation("Asia/Ho_Chi_Minh")
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
+	
+	loc, err := time.LoadLocation("Asia/Ho_Chi_Minh")
+	if err != nil {
+		fmt.Println(err)
+	}
 
-	fmt.Println(t.UTC())
-	fmt.Println(time.Now().UTC())
+	fmt.Println(t.UTC().In(loc))
+	fmt.Println(time.Now().Format(timeLayout))
 }
